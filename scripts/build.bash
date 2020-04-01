@@ -7,7 +7,7 @@ BUILD_DIR="${ROOT_DIR}/build"
 INSTALL_DIR="${BUILD_DIR}/installed"
 ISOLATE_DIR="${BUILD_DIR}/isolated"
 
-OUT_FILE="${1:-mageops-debug-helper.phar}"
+OUT_FILE="${1:-${ROOT_DIR}/mageops-debug-helper.phar}"
 PHP="${PHP_BINARY:-$(which php)}"
 
 rm -rf "$BUILD_DIR/" "$INSTALL_DIR/" "$ISOLATE_DIR/"
@@ -56,6 +56,8 @@ cd "$INSTALL_DIR"
     --force \
     --no-config \
     --no-interaction \
+    --no-progress \
+    --no-suggest \
     --stop-on-failure \
     --ansi \
         "$INSTALL_DIR/" \
