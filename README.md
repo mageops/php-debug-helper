@@ -1,3 +1,4 @@
+[![Build Status](https://img.shields.io/travis/com/mageops/php-debug-helper?label=Phar+Archive+Build)](https://travis-ci.com/mageops/php-debug-helper)
 MageOps Injectable PHP Debugging Helper
 =======================================
 
