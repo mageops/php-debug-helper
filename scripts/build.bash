@@ -28,6 +28,8 @@ echo -e "\n * Install production composer deps \n"
     --no-scripts \
     --no-interaction \
     --no-plugins \
+    --no-progress \
+    --no-suggest \
     --prefer-dist \
     --ignore-platform-reqs \
     --optimize-autoloader \
@@ -56,8 +58,6 @@ cd "$INSTALL_DIR"
     --force \
     --no-config \
     --no-interaction \
-    --no-progress \
-    --no-suggest \
     --stop-on-failure \
     --ansi \
         "$INSTALL_DIR/" \
