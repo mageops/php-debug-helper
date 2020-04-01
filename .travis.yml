@@ -1,0 +1,21 @@
+language: php
+php:
+  - '7.2'
+  - '7.3'
+
+before_script:
+    - travis_retry composer self-update
+    - travis_retry composer install --no-interaction --prefer-source --dev
+
+script:
+    - set -e
+    - composer build
+
+deploy:
+  - provider: releases
+    token: $GITHUB_OAUTH_TOKEN
+    file: mageops-debug-helper.phar
+    skip_cleanup: true
+    on:
+      tags: true
+      php: '7.2'

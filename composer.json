@@ -1,0 +1,30 @@
+{
+    "name": "creativestyle/mageops-debug-helper",
+    "description": "Enhance error debugging output just by adding this to the top of your front-controller",
+    "keywords": ["phar", "debugging", "symfony", "error-handler", "development"],
+    "homepage": "https://github.com/mageops",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Filip Sobalski",
+            "email": "filip.sobalski@creativestyle.pl"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "symfony/error-handler": "^5"
+    },
+    "require-dev": {
+        "composer/composer": "^1",
+        "clue/phar-composer": "^1",
+        "humbug/php-scoper": "^1.0@dev"
+    },
+    "autoload": {
+        "psr-4": {"Creativestyle\\MageOps\\": "src/"}
+    },
+    "bin": ["entrypoint.php"],
+    "scripts": {
+        "build": "scripts/build.bash"
+    },
+    "minimum-stability": "dev"
+}
