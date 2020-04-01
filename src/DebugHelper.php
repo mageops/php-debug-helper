@@ -29,8 +29,6 @@ class DebugHelper
     {
         Debug::enable();
         DebugClassLoader::enable();
-
-        echo self::class . "::enable()\n";
     }
 }
 

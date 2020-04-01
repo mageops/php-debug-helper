@@ -63,6 +63,13 @@ cd "$INSTALL_DIR"
         "$INSTALL_DIR/" \
         "$INSTALL_DIR/vendor/"
 
+echo -e "\n * Dump isolated autoload \n"
+"$ROOT_DIR/vendor/bin/composer" dump-autoload \
+    --working-dir="$ISOLATE_DIR" \
+    --no-interaction \
+    --classmap-authoritative \
+    --ansi
+
 
 echo -e "\n * Build isolated project into phar archive: ${ISOLATE_DIR}/ -> ${OUT_FILE} \n"
 cd "$INSTALL_DIR"
