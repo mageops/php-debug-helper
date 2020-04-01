@@ -26,5 +26,10 @@
     "scripts": {
         "build": "scripts/build.bash"
     },
+    "config": {
+        "platform": {
+            "php": "7.2.29"
+        }
+    },
     "minimum-stability": "dev"
 }
