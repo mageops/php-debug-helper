@@ -13,7 +13,7 @@ script:
 
 deploy:
   - provider: releases
-    token: $GITHUB_OAUTH_TOKEN
+    token: $GITHUB_TOKEN
     file: mageops-debug-helper.phar
     skip_cleanup: true
     on:
